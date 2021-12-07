@@ -454,7 +454,7 @@ class Keyboard:
         datet =str(dates)+" 00:00:00'"
         print(datet)
 
-        q = "INSERT into record VALUES ("+ str(message.from_user.id)+","+str(res2)+"," + str(idproc) +",'"+str(timeuncode)+"','"+ datet+");"
+        q = "insert or replace into record VALUES ("+ str(message.from_user.id)+","+str(res2)+"," + str(idproc) +",'"+str(timeuncode)+"','"+ datet+");"
         print(q)
         executeQuery(q)
 
